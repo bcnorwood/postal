@@ -1,2 +1,2 @@
 # postal
-Barebones email client built with React and Express.
+Barebones email viewer built with React and Express.
