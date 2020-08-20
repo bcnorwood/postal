@@ -5,5 +5,5 @@ import { render } from 'react-dom';
 // local imports
 import App from './app';
 
-// render the application in the DOM
+// render application in DOM
 render(<App />, document.getElementById('app'));

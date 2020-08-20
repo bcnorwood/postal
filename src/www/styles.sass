@@ -1,2 +1,16 @@
 // import bootstrap styles
 @import 'node_modules/bootstrap/scss/bootstrap'
+
+// scope selectors to our app element to ensure higher specificity than the defaults
+#app
+	overflow-y: auto
+
+	// email links
+	nav a
+		&:hover
+			text-decoration: none
+			border-color: $dark !important
+
+		// small text for from/to/date/time
+		.info
+			font-size: 0.75rem
