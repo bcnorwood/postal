@@ -13,7 +13,7 @@ export async function handler({ params: { id } }, response) {
 	response.download = promisify(response.download);
 
 	// find .msg file
-	const path = formatPath({ dir: '/usr/src/data', name: id, ext: '.msg' });
+	const path = formatPath({ dir: process.env.POSTAL_DATA_DIR, name: id, ext: '.msg' });
 
 	// send .msg file with original filename
 	return response.download(path, getEmail(id).filename);

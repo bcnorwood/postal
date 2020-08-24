@@ -10,7 +10,7 @@ export const method = 'get';
 
 export async function handler({ params: { id } }) {
 	// find .msg file
-	const path = formatPath({ dir: '/usr/src/data', name: id, ext: '.msg' });
+	const path = formatPath({ dir: process.env.POSTAL_DATA_DIR, name: id, ext: '.msg' });
 
 	// read .msg file
 	const buf = await fs.readFile(path);

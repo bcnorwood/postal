@@ -1,7 +1,8 @@
 // node imports
 import { existsSync, readFileSync, promises as fs } from 'fs';
+import { join as joinPath } from 'path';
 
-const path = '/usr/src/data/postal.json';
+const path = joinPath(process.env.POSTAL_DATA_DIR, 'postal.json');
 
 // read data store or create one if necessary
 const data = existsSync(path) ? JSON.parse(readFileSync(path)) : {};

@@ -23,7 +23,7 @@ export async function handler({ files: { emails }}) {
 	await Promise.all(
 		emails.map(async ({ uuid: id, file: tmpPath, filename }) => {
 			// construct path to .msg file
-			const path = formatPath({ dir: '/usr/src/data', name: id, ext: '.msg' });
+			const path = formatPath({ dir: process.env.POSTAL_DATA_DIR, name: id, ext: '.msg' });
 
 			// copy .msg file to new path
 			await fs.copyFile(tmpPath, path);

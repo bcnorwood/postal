@@ -10,7 +10,7 @@ export const method = 'delete';
 
 export async function handler({ params: { id } }) {
 	// find .msg file in data dir
-	const path = formatPath({ dir: '/usr/src/data', name: id, ext: '.msg' });
+	const path = formatPath({ dir: process.env.POSTAL_DATA_DIR, name: id, ext: '.msg' });
 
 	// delete .msg file
 	await fs.unlink(path);
