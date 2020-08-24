@@ -1,14 +1,18 @@
 # Postal
-Postal is a barebones email message (**.msg** file) viewer built with React and Express. It runs inside a self-contained Docker application built using the standard `nginx` and `node` images from DockerHub, leveraging Parcel and Babel to bundle and transpile the ES6 and Sass code into browser- and node-friendly packages.
+Postal is a barebones email message (**.msg** file) viewer built with React and Express. It runs inside a self-contained Docker application built using the standard **nginx** and **node** images from DockerHub, leveraging Parcel and Babel to bundle and transpile the ES6 and Sass code into browser- and node-friendly packages.
 
 ## Dependencies
-You'll need [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/) as well as [Docker](https://www.docker.com/) in order to build and deploy Postal. Environment-targeted versions of the remaining dependencies (NPM modules and DockerHub images) will be installed automatically.
+You'll need [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/) as well as [Docker](https://www.docker.com/) in order to build and deploy Postal.
+
+Environment-targeted versions of the remaining dependencies (NPM modules and DockerHub images) will be installed automatically.
 
 ## Getting Started
-Check out the repo from github to your preferred directory:
+Check out the repo from GitHub to your preferred directory:
+
 `git checkout git@github.com:bcnorwood/postal.git`
 
 Install the NPM dependencies, build the JavaScript bundles, and start the Docker application:
+
 |npm|yarn|
 |---|---|
 |`npm install`|`yarn`|
