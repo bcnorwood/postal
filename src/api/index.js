@@ -1,5 +1,5 @@
-// built-in imports
-import { isString } from 'util';
+// node imports
+import { isNullOrUndefined } from 'util';
 
 // module imports
 import express from 'express';
@@ -17,8 +17,11 @@ busboy.extend(app, { upload: true });
 // bind routes, handling errors and returning 500
 Object.values(routes).forEach(({ route, method, handler }) => {
 	app[method](route, (request, response) => handler(request, response).then(
-		(result) => response[isString(result) ? 'send' : 'json'](result),
-		(error) => response.status(500).json({ code: error.code, message: error.message, stack: error.stack })
+		// success - pass result to front end (if necessary)
+		(result) => isNullOrUndefined(result) || response.json(result),
+
+		// failure - return 500 and pass error details to front end
+		({ code, message, stack }) => response.status(500).json({ code, message, stack })
 	));
 });
 
