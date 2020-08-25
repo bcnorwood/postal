@@ -22,7 +22,7 @@ busboy.extend(app, { upload: true });
 Object.values(routes).forEach(({ route, method, handler }) => {
 	app[method](route, (request, response) => handler(request, response).then(
 		// success - pass result to front end (if necessary)
-		(result) => isNullOrUndefined(result) || response.json(result),
+		(result) => isNullOrUndefined(result) ? response.end() : response.json(result),
 
 		// failure - return 500 and pass error details to front end
 		({ code, message, stack }) => response.status(500).json({ code, message, stack })
