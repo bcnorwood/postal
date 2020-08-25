@@ -3,7 +3,7 @@ import { promises as fs } from 'fs';
 import { format as formatPath } from 'path';
 
 // local imports
-import { del as deleteEmail, save as persistEmails } from '../data';
+import { del as deleteEmail, save as persistEmails } from 'api/data';
 
 export const route = '/emails/:id';
 export const method = 'delete';

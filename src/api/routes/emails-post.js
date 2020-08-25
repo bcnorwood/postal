@@ -7,7 +7,7 @@ import { isArray } from 'util';
 import { simpleParser as parseMail } from 'mailparser';
 
 // local imports
-import { set as saveEmail, save as persistEmails } from '../data';
+import { set as saveEmail, save as persistEmails } from 'api/data';
 import { handler as getEmails } from './emails-get';
 
 export const route = '/emails';

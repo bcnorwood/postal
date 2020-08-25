@@ -3,7 +3,7 @@ import { format as formatPath } from 'path';
 import { promisify } from 'util';
 
 // local imports
-import { get as getEmail } from '../data';
+import { get as getEmail } from 'api/data';
 
 export const route = '/emails/:id/dl';
 export const method = 'get';

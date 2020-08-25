@@ -6,7 +6,11 @@ import express from 'express';
 import busboy from 'express-busboy';
 
 // local imports
+import { init as initData } from './data';
 import routes from './routes/*.js';
+
+// initialize data store
+initData();
 
 // start Express server
 const app = express();

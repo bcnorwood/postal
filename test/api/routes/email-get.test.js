@@ -26,9 +26,8 @@ import { format as formatPath } from 'path';
 
 import { handler } from 'api/routes/email-get';
 
-const MESSAGE_DIR = process.env.POSTAL_DATA_DIR = '/tmp/postal';
 const MESSAGE_ID = '__MESSAGE_ID__';
-const MESSAGE_PATH = formatPath({ dir: MESSAGE_DIR, name: MESSAGE_ID, ext: '.msg' });
+const MESSAGE_PATH = formatPath({ dir: process.env.POSTAL_DATA_DIR, name: MESSAGE_ID, ext: '.msg' });
 
 it('gets a message', async () => {
 	expect.assertions(5);

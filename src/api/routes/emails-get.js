@@ -1,5 +1,5 @@
 // local imports
-import { all as allEmails } from '../data';
+import { all as allEmails } from 'api/data';
 
 export const route = '/emails';
 export const method = 'get';

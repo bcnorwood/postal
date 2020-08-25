@@ -20,9 +20,8 @@ const response = {
 	download: jest.fn().mockReturnValue(RETURN_VALUE)
 };
 
-const MESSAGE_DIR = process.env.POSTAL_DATA_DIR = '/tmp/postal';
 const MESSAGE_ID = '__MESSAGE_ID__';
-const MESSAGE_PATH = formatPath({ dir: MESSAGE_DIR, name: MESSAGE_ID, ext: '.msg' });
+const MESSAGE_PATH = formatPath({ dir: process.env.POSTAL_DATA_DIR, name: MESSAGE_ID, ext: '.msg' });
 
 it('sends a message file', async () => {
 	expect.assertions(3);

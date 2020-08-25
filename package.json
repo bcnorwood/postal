@@ -11,7 +11,7 @@
     "build-api": "NODE_ENV=development parcel build src/api/index.js --out-dir=dist/api --target=node --no-minify --no-source-maps --bundle-node-modules",
     "start": "docker-compose up -d",
     "stop": "docker-compose down",
-    "test": "jest"
+    "test": "POSTAL_DATA_DIR=__DATA_DIR__ jest"
   },
   "devDependencies": {
     "babel-jest": "^26.3.0",
