@@ -31,4 +31,6 @@ To import more, click on the **Import** button in the top-right corner of the sc
 Your history will be tracked through React Router while you use Postal, so you can hit the back and forward buttons to assist in browsing.
 
 ## Testing
-Postal sports a full unit testing suite powered by Jest. These tests are located in the `test` folder at the root of the project and can be executed by running `npm test` or `yarn test`.
+Postal sports a unit testing suite powered by Jest. These tests are located in the `test` folder at the root of the project and can be executed by running `npm test` or `yarn test`.
+
+As with most real-world projects, test coverage is not where I'd like it to be. Currently, back-end routes and the data store are tested. Front-end testing will likely require significant refactoring.
