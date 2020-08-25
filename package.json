@@ -10,9 +10,12 @@
     "build-www": "NODE_ENV=development parcel build src/www/index.html --out-dir=dist/www --target=browser --no-minify",
     "build-api": "NODE_ENV=development parcel build src/api/index.js --out-dir=dist/api --target=node --no-minify --no-source-maps --bundle-node-modules",
     "start": "docker-compose up -d",
-    "stop": "docker-compose down"
+    "stop": "docker-compose down",
+    "test": "jest"
   },
   "devDependencies": {
+    "babel-jest": "^26.3.0",
+    "jest": "^26.4.2",
     "npm-run-all": "^4.1.5",
     "parcel-bundler": "^1.12.4",
     "sass": "^1.26.10"
@@ -26,5 +29,14 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "^api(.*)": "<rootDir>/src/api$1",
+      "^www(.*)": "<rootDir>/src/www$1"
+    },
+    "transform": {
+      "^.+\\.js$": "babel-jest"
+    }
   }
 }

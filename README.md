@@ -29,3 +29,6 @@ The messages already stored will be visible in Postal's simple, responsive inter
 To import more, click on the **Import** button in the top-right corner of the screen (while not viewing a message) and select one or more **.msg** files to upload. The message list will update to reflect the new messages.
 
 Your history will be tracked through React Router while you use Postal, so you can hit the back and forward buttons to assist in browsing.
+
+## Testing
+Postal sports a full unit testing suite powered by Jest. These tests are located in the `test` folder at the root of the project and can be executed by running `npm test` or `yarn test`.
