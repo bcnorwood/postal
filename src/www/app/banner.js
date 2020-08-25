@@ -33,7 +33,7 @@ export default function Banner({ setEmails }) {
 	};
 
 	return (
-		<header className="d-flex justify-content-between align-items-center mb-1">
+		<header className="d-flex justify-content-between align-items-center my-1">
 			<h1>Postal</h1>
 			<button className="btn btn-success" onClick={ handleImport }>Import</button>
 		</header>
