@@ -9,7 +9,7 @@ Environment-targeted versions of the remaining dependencies (NPM modules and Doc
 ## Getting Started
 Check out the repo from GitHub to your preferred directory:
 
-`git checkout git@github.com:bcnorwood/postal.git`
+`git clone git@github.com:bcnorwood/postal.git`
 
 Install the NPM dependencies, build the JavaScript bundles, and start the Docker application:
 
